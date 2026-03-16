@@ -1,18 +1,34 @@
 public class Caribou extends Animal {
 
     Caribou(int weight, Season season) {
-        // TODO: Implement.
-        super(0, null, null);
+        super(weight, season, season == Season.WINTER ? Color.WHITE : Color.BROWN);
     }
 
     @Override
     public String toString() {
-        // TODO: Implement.
-        return null;
+        Season current = getCurrentSeason();
+        if (current == Season.WINTER) {
+            return "Caribou: I am migrating south. My weight is: " + weight + " and my color is: " + color;
+        } else if (current == Season.SUMMER) {
+            return "Caribou: I am migrating north. My weight is: " + weight + " and my color is: " + color;
+        }
+        return "Caribou: My weight is: " + weight + " and my color is: " + color;
     }
 
     @Override
     public void changeSeason() {
-        // TODO: Implement.
+        super.changeSeason();
+        switch (getCurrentSeason()) {
+            case WINTER:
+                color = Color.WHITE;
+                break;
+            case SPRING:
+                color = Color.BROWN;
+                break;
+            case SUMMER:
+                break;
+            case FALL:
+                break;
+        }
     }
 }
