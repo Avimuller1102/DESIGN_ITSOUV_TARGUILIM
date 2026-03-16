@@ -27,19 +27,19 @@ public class FigTree extends Tree {
         super.changeSeason();
         switch (getCurrentSeason()) {
             case WINTER:
-                height += 20;
-                leavesColor = null; // leaves drop
+                height = (int) Math.round(height + 20.0);
+                leavesColor = null;
                 break;
             case SPRING:
-                height += 30;
+                height = (int) Math.round(height + 30.0);
                 leavesColor = Color.GREEN;
                 break;
             case SUMMER:
-                height += 30;
-                break; // Gives fruit but leaves stay green
+                height = (int) Math.round(height + 30.0);
+                break;
             case FALL:
-                height += 20;
-                leavesColor = Color.YELLOW; // Turn yellow
+                height = (int) Math.round(height + 20.0);
+                leavesColor = Color.YELLOW;
                 break;
         }
     }

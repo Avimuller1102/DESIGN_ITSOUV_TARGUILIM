@@ -23,7 +23,7 @@ public class Bear extends Animal {
                 weight = (int) Math.round(weight * 0.75);
                 break;
             case SUMMER:
-                weight = (int) Math.round(weight * (4.0 / 3.0));
+                weight = (int) Math.round(weight + (weight / 3.0));
                 break;
             case FALL:
                 weight = (int) Math.round(weight * 1.25);

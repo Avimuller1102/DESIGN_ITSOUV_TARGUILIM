@@ -17,16 +17,16 @@ public class OliveTree extends Tree {
         super.changeSeason();
         switch (getCurrentSeason()) {
             case WINTER:
-                height += 5;
+                height = (int) Math.round(height + 5.0);
                 break;
             case SPRING:
-                height += 10;
+                height = (int) Math.round(height + 10.0);
                 break;
             case SUMMER:
-                height += 10;
+                height = (int) Math.round(height + 10.0);
                 break;
             case FALL:
-                height += 5;
+                height = (int) Math.round(height + 5.0);
                 break;
         }
     }
